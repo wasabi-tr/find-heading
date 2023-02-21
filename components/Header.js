@@ -10,6 +10,7 @@ function Header() {
                     src={'/next.svg'}
                     width={200}
                     height={100}
+                    alt="ロゴ"
                 />
             </Link>
             <nav className="">
