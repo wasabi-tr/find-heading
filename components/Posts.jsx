@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@/styles/post.module.css"
+import styles from "@/styles/post.module.scss"
 import Image from "next/image";
 
 function Posts(props) {
@@ -12,12 +12,14 @@ function Posts(props) {
             <Image
               src={eyecatch.url}
               alt={`「${title}」のサムネイル画像`}
-              width={eyecatch.width}
-              height={eyecatch.height}
               quality={75}
+              fill
+              style={{
+                objectFit: 'cover',
+              }}
             />
           </figure>
-          <Link href={slug}>{title}</Link>
+          <Link href={slug} className="text-xs">{title}</Link>
         </li>
       )}
     </ul>

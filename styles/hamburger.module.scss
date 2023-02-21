@@ -1,0 +1,28 @@
+.open{
+    color: #ff0000;
+}
+.close{
+    color: blue;
+}
+.sideMenu{
+    background-color: var(--gray-15);
+    cursor: pointer;
+}
+.hamburger{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    span{
+        width: 100%;
+        height: 1px;
+        background-color: var(--black);
+    }
+}
+.button{
+    font-size: 12px;
+    writing-mode: vertical-rl;
+    margin: 10px 0 0 ;
+    
+}

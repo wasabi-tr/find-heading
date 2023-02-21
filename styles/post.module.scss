@@ -1,0 +1,33 @@
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px 24px;
+}
+.item{
+    width:calc(25% - 24px * 3/4);
+}
+.image{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+}
+.image img{
+    transition: 0.4s;
+
+}
+.image:hover img{
+    transform: scale(1.1,1.1);
+
+}
+@media only screen and (max-width:1024px) {
+    .item{
+        width:calc(33.333333% - 24px * 2/3);
+    }
+    
+}
+@media only screen and (max-width:599px) {
+    .item{
+        width:100%;
+    }
+}
