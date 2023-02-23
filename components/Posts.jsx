@@ -3,7 +3,6 @@ import styles from "@/styles/post.module.scss"
 import Image from "next/image";
 
 function Posts(props) {
-  // console.log(props)
   return (
     <ul className={styles.list}>
       {props.posts.map(({ title, slug, eyecatch }) =>
