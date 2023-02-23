@@ -1,0 +1,10 @@
+.categoryList{
+    li{
+        a{
+            transition: 0.3s;
+            &:hover{
+                color: var(--yellow);
+            }
+        }
+    }
+}
