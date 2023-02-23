@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import { getAllPosts } from '@/lib/api'
 import Posts from '@/components/Posts'
@@ -19,7 +17,7 @@ export default function Home(props) {
 }
 
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const posts = await getAllPosts();
   for (const post of posts) {
     if (!post.hasOwnProperty("eyecatch")) {

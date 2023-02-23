@@ -1,13 +1,13 @@
 import '@unocss/reset/tailwind.css'
 import '@/styles/globals.scss'
 import Layout from '@/components/Layout'
-import SideMenuContainer from '@/components/SideMenuContainer'
+import SideMenu from '@/components/SideMenu'
 
 export default function App({ Component, pageProps }) {
 
   return (
     <Layout>
-      <SideMenuContainer></SideMenuContainer>
+      <SideMenu></SideMenu>
       <Component {...pageProps} />
     </Layout>
   )

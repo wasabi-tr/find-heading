@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
     
     const catSlug = context.params.slug //取得したカテゴリーのスラッグ
-
+    // console.log(context)
     //カテゴリー名を取得するためにもう一度getAllCategoriesを呼び出す
     const allCats = await getAllCategories()
     const cat = allCats.find(({ slug }) => slug === catSlug)
