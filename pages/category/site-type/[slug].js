@@ -1,12 +1,33 @@
+import Breadcrumb from "@/components/Breadcrumb";
+import PageHeader from "@/components/PageHeader";
 import Posts from "@/components/Posts";
+import Section from "@/components/Section";
 import { getAllCategories, getAllPostByCategory } from "@/lib/api";
 import { defaultEyecatch } from "@/lib/contents";
 
 
 export default function Slug(props) {
+    const breadcrumbList = [
+        {
+            name: "ホーム",
+            path: "/",
+        },
+        {
+            name: "カテゴリー",
+            path: "/category",
+        },
+        {
+            name: props.name,
+            path: `/category/site-type/${props.slug}`,
+        },
+    ]
     return (
         <div>
-           {props.posts.length? <Posts posts={props.posts} /> : <div>投稿はございません</div>}
+            <Breadcrumb list={breadcrumbList}></Breadcrumb>
+            <PageHeader pageTitle={props.name}></PageHeader>
+            <Section>
+                {props.posts.length ? <Posts posts={props.posts} /> : <div>投稿はございません</div>}
+            </Section>
         </div>
     );
 }
@@ -16,7 +37,7 @@ export async function getStaticPaths() {
     //カテゴリーを取得（endpoint:categories）
     const allCategory = await getAllCategories("site-type");
     return {
-        paths: allCategory.map(({ slug }) => `/site-type/${slug}`),
+        paths: allCategory.map(({ slug }) => `/category/site-type/${slug}`),
         fallback: false,
     }
 }
@@ -28,8 +49,8 @@ export async function getStaticProps(context) {
     //カテゴリー名を取得するためにもう一度getAllCategoriesを呼び出す
     const allCats = await getAllCategories("site-type")
     const cat = allCats.find(({ slug }) => slug === catSlug)
-    const posts = await getAllPostByCategory("site-type",cat.slug)
-    
+    const posts = await getAllPostByCategory("site-type", cat.slug)
+
     for (const post of posts) {
         if (!post.hasOwnProperty("eyecatch")) {
             post.eyecatch = defaultEyecatch;
@@ -37,7 +58,7 @@ export async function getStaticProps(context) {
     }
     return {
         props: {
-            name:cat.name,
+            name: cat.name,
             posts: posts,
         }
     }

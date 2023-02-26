@@ -7,18 +7,20 @@ function Posts(props) {
     <ul className={styles.list}>
       {props.posts.map(({ title, slug, eyecatch }) =>
         <li key={slug} className={styles.item}>
-          <figure className={styles.image}>
-            <Image
-              src={eyecatch.url}
-              alt={`「${title}」のサムネイル画像`}
-              quality={75}
-              fill
-              style={{
-                objectFit: 'cover',
-              }}
-            />
-          </figure>
-          <Link href={slug} className="text-xs">{title}</Link>
+          <a href="" target="_blank">
+            <figure className={styles.image}>
+              <Image
+                src={eyecatch.url}
+                alt={`「${title}」のサムネイル画像`}
+                quality={75}
+                fill
+                style={{
+                  objectFit: 'cover',
+                }}
+              />
+            </figure>
+            <p className="text-xs">{title}</p>
+          </a>
         </li>
       )}
     </ul>

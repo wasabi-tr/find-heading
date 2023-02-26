@@ -7,7 +7,7 @@ function Layout({ children }) {
     return (
         <>
             <Header></Header>
-            <main className={`${styles.mainWidth} py-16 ml-auto`}>
+            <main className={`${styles.mainWidth} pb-16 ml-auto`}>
                 <Container>
                     {children}
                 </Container>

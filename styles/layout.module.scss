@@ -1,3 +1,6 @@
 .mainWidth{
     width: calc(100% - 5rem);
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 }

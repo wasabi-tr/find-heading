@@ -27,7 +27,7 @@ function Categories(props) {
                             {catSlugs.map(({ name, slug }) =>
                                 <li key={slug}>
                                     <Link 
-                                    href={`/${catApiName}/${slug}`} 
+                                    href={`/category/${catApiName}/${slug}`} 
                                     onClick={props.closeMenu}
                                     className={"text-xs"}
                                     >{name}</Link>
