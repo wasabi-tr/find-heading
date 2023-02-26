@@ -16,7 +16,7 @@ function category() {
     return (
         <div className={styles.wrap}>
             <Breadcrumb list={breadcrumbList}></Breadcrumb>
-            <Section>
+            <Section width="small">
                 <Categories></Categories>
             </Section>
         </div>

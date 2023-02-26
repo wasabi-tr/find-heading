@@ -11,13 +11,19 @@ const GlobalNav = (props) => {
                     href="/" 
                     className={utility.textHover} 
                     onClick={props.isPcShow ?props.closeMenu:null}
-                    >すべて</Link>
+                    >ホーム</Link>
                 </li>
                 <li>
-                    <Link href="/category" className={utility.textHover}>カテゴリー</Link>
+                    <Link href="/category" 
+                    className={utility.textHover}
+                    onClick={props.isPcShow ?props.closeMenu:null}
+                    >カテゴリー</Link>
                 </li>
                 <li>
-                    <Link href="/about" className={utility.textHover}>運営者について</Link>
+                    <Link href="/about" 
+                    className={utility.textHover}
+                    onClick={props.isPcShow ?props.closeMenu:null}
+                    >運営者について</Link>
                 </li>
             </ul>
         </nav>

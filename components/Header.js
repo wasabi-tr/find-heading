@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/header.module.scss"
-import utility from "@/styles/utility.module.scss";
 import Container from "./Container";
 import GlobalNav from "./GlobalNav";
 
@@ -10,7 +9,7 @@ function Header() {
         <header className={`items-center ml-auto ${styles.header}`}>
             <Container>
                 <div className="flex justify-between items-center border-b pb-8">
-                    <div className="flex items-center gap-4">
+                    <div className={`${styles.logo} flex items-center gap-4`}>
                         <Link href="/">
                             <Image
                                 src={'/logo.svg'}

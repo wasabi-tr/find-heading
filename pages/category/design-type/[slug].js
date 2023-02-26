@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/Breadcrumb";
+import Meta from "@/components/Meta";
 import PageHeader from "@/components/PageHeader";
 import Posts from "@/components/Posts";
 import Section from "@/components/Section";
@@ -23,6 +24,9 @@ export default function Slug(props) {
     ]
     return (
         <div>
+            <Meta
+                title={props.name}
+            />
             <Breadcrumb list={breadcrumbList}></Breadcrumb>
             <PageHeader pageTitle={props.name}></PageHeader>
             <Section>
@@ -57,8 +61,10 @@ export async function getStaticProps(context) {
         if (!post.hasOwnProperty("eyecatch")) {
             post.eyecatch = defaultEyecatch;
         }
+        if (!post.hasOwnProperty("link")) {
+            post.link = "/";
+          }
     }
-    console.log(cat)
 
 
     return {

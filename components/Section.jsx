@@ -1,7 +1,7 @@
 import styles from "@/styles/section.module.scss"
-function Section({children}) {
+function Section({children,width}) {
     return (
-        <div className={styles.section}>
+        <div className={`${styles.section} ${width? styles[width]:""}` }>
             {children}
         </div>
     );
