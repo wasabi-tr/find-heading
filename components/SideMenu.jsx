@@ -1,7 +1,7 @@
 import styles from '@/styles/side-menu.module.scss'
 import { useState } from 'react';
 import Categories from './Categories';
-import GlobalNav from './globalNav';
+import GlobalNav from './GlobalNav';
 function SideMenu() {
 
     const [isHover, setIsHover] = useState(false);
