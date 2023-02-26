@@ -1,5 +1,6 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import Categories from "@/components/Categories";
+import Meta from "@/components/Meta";
 import Section from "@/components/Section";
 import styles from "@/styles/page-category.module.scss"
 function category() {
@@ -14,12 +15,17 @@ function category() {
         },
     ]
     return (
-        <div className={styles.wrap}>
-            <Breadcrumb list={breadcrumbList}></Breadcrumb>
-            <Section width="small">
-                <Categories></Categories>
-            </Section>
-        </div>
+        <>
+            <Meta
+                title="カテゴリー"
+            />
+            <div className={styles.wrap}>
+                <Breadcrumb list={breadcrumbList}></Breadcrumb>
+                <Section width="small">
+                    <Categories></Categories>
+                </Section>
+            </div>
+        </>
     );
 }
 
