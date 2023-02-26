@@ -39,6 +39,7 @@
     width: 100%;
     aspect-ratio: 3/2;
     overflow: hidden;
+    background-color: var(--gray-10);
     &::after{
         content: "";
         position: absolute;
@@ -54,7 +55,6 @@
 
 .image img {
     transition: 0.4s;
-
 }
 
 .image:hover img {

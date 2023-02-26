@@ -17,7 +17,7 @@ function Posts(props) {
                 quality={75}
                 fill
                 style={{
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                 }}
               />
             </figure>
