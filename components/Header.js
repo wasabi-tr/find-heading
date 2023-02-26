@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "@/styles/header.module.scss"
 import utility from "@/styles/utility.module.scss";
 import Container from "./Container";
-import GlobalNav from "./globalNav";
+import GlobalNav from "./GlobalNav";
 
 function Header() {
     return (
