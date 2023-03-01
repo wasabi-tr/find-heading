@@ -12,7 +12,6 @@ export default function Home(props) {
   return (
     <>
       <Meta
-        title="ホーム"
         pageImage={ogp.src}
         pageImageW={ogp.width}
         pageImageH={ogp.height}
