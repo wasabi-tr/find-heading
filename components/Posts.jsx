@@ -21,11 +21,11 @@ function Posts(props) {
                 }}
               />
             </figure>
-            <div className="flex items-center text-xs mt-2 gap-2">
+            <div className="flex text-xs mt-2 gap-2">
               <p>{title}</p>
               <FontAwesomeIcon
                 icon={faArrowUpRightFromSquare}
-                style={{color:"var(--gray-50)" ,transform: "translateY(-1px)" }}
+                style={{color:"var(--gray-50)" ,margin:"3px 0 0 " }}
               />
             </div>
           </a>
