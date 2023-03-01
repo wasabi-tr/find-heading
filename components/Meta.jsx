@@ -24,8 +24,9 @@ const Meta = (props) => {
             <meta property="og:title" content={title}></meta>
             <meta name="description" content={desc}></meta>
             <link rel="canonical" href={url} />
-            <meta property="og:url" href={url}></meta>
+            <meta property="og:url" content={url}></meta>
             <meta property="og:site_name" content={siteTitle}></meta>
+            <meta property="og:description" content={desc}></meta>
             <meta property="og:type" content={siteType}></meta>
             <meta property="og:locale" content={siteLocale}></meta>
             <link rel="icon" href={siteIcon} />
