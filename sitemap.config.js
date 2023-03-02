@@ -3,4 +3,5 @@ module.exports = {
     generateRobotsTxt: true, // (optional)
     outDir: './out'
     // ...other options
+    
 }
