@@ -6,8 +6,8 @@ import Section from '@/components/Section'
 import Meta from '@/components/Meta'
 import ogp from '@/images/ogp.jpg'
 
-const inter = Inter({ subsets: ['latin'] })
 
+const inter = Inter({ subsets: ['latin'] })
 export default function Home(props) {
   return (
     <>
