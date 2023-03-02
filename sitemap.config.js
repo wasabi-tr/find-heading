@@ -1,8 +1,5 @@
-const { siteMeta } = require("@/lib/contents")
-
-const { siteUrl } = siteMeta
 module.exports = {
-    siteUrl: siteUrl,
+    siteUrl: 'https://heeeeading-web.net',
     generateRobotsTxt: true, // (optional)
     outDir: './out'
     // ...other options
