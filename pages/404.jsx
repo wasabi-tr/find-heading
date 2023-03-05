@@ -14,7 +14,7 @@ export default function Custom404() {
                 <div className="text-center mt-6">
                     <Link 
                     href={"/"}
-                    className="inline-block text-left"
+                    className="inline-block text-left font-bold"
                     >ホーム</Link>
                 </div>
             </Section>
