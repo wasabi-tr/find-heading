@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouseChimney,faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
 import '@fortawesome/fontawesome-svg-core/styles.css'
 function Posts(props) {
-  // console.log(props.posts)
   return (
     <ul className={styles.list}>
       {props.posts.map(({ title, slug, eyecatch,link }) =>
@@ -12,6 +11,7 @@ function Posts(props) {
           <a href={link} target="_blank" rel="noreferrer">
             <figure className={styles.image}>
               <Image
+                key={eyecatch.url}
                 src={eyecatch.url}
                 alt={`「${title}」のサムネイル画像`}
                 quality={75}
