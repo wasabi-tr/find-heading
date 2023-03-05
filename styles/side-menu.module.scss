@@ -10,6 +10,9 @@
     z-index: 5;
     color: #fff;
     padding: 3rem;
+    &:focus-within{
+        transform: translate(5rem, 0);
+    }
 
     @media screen and (max-width: 768px) {
         padding: 3rem 1.5rem;
