@@ -9,7 +9,7 @@ function SideMenu() {
         setIsHover((prev) => !prev);
     }
     const clickOpenSideMenu = () => {
-        setIsHover(!isHover);
+        setIsHover((prev) => !prev);
     }
     const closeSideMenu = () => {
         isHover ? setIsHover(!isHover) : ""

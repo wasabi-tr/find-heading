@@ -19,11 +19,15 @@
         width: 60%;
     }
 }
+.close{
+    .menu_wrap {
+        transform: translate(-100%, 0);
+    }
+}
 
 .open {
     .menu_wrap {
         transform: translate(5rem, 0);
-
         @media screen and (max-width: 768px) {
             transform: translate(0, 0);
         }
