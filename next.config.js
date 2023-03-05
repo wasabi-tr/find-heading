@@ -3,14 +3,9 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     images:{
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'images.microcms-assets.io',
-          port: '',
-          pathname: '/assets/**',
-        },
-      ],
+      loader:'imgix',
+      path:';',
+      domains:['images.microcms-assets.io']
     },
   }
   
