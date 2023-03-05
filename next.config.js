@@ -3,8 +3,8 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
     images:{
-      loader:'imgix',
-      path:';',
+      // loader:'imgix',
+      // path:'',
       domains:['images.microcms-assets.io']
     },
   }
