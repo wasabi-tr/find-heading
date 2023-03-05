@@ -19,7 +19,7 @@ function about() {
                     <h2 className={styles.heading}>制作・運営者</h2>
                     <div className={styles.content}>
                         <a href="https://wasabi-web.net/" target="_blank" rel="noreferrer">Wasabi（わさび）</a>
-                        <p className={styles.text}>千葉県で活動するWebサイト制作です。</p>
+                        <p className={styles.text}>千葉県で活動するWebサイト制作者です。</p>
                     </div>
                 </section>
                 <section className={styles.section}>
