@@ -8,12 +8,12 @@ function Posts(props) {
     <ul className={styles.list}>
       {props.posts.map(({ title, slug, eyecatch,link }) =>
         <li key={slug} className={styles.item}>
-          <a href={link} target="_blank" rel="noreferrer">
+          <a href={link} target="_blank" rel="noreferrer" aria-label={`「${title}」のサイトに推移する`}>
             <figure className={styles.image}>
               <Image
                 key={eyecatch.url}
                 src={eyecatch.url}
-                alt={`「${title}」のサムネイル画像`}
+                alt={`「${title}」の見出しデザイン`}
                 quality={75}
                 fill
                 style={{
