@@ -1,3 +1,4 @@
+import Form from "@/components/Form";
 import Meta from "@/components/Meta";
 import Section from "@/components/Section";
 import styles from "@/styles/page-about.module.scss"
@@ -26,7 +27,9 @@ function about() {
                     <h2 className={styles.heading}>免責事項</h2>
                     <div className={styles.content}>
                         <p className={styles.text}>
-                            当Webサイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。<br />当Webサイトで掲載している画像の著作権や肖像権は各デザインの権利者に帰属します。<br />掲載内容や掲載画像に問題がございましたら、<a href="https://wasabi-web.net/contact" target="_blank" rel="noreferrer">お問い合わせ</a>よりご連絡下さい。</p>
+                            当Webサイトに掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。<br />当Webサイトで掲載している画像の著作権や肖像権は各デザインの権利者に帰属します。<br />掲載内容や掲載画像に問題がございましたら、お問い合わせフォームよりお問い合わせください。
+                        </p>
+                        <Form></Form>
                     </div>
                 </section>
             </Section>
