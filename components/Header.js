@@ -19,7 +19,7 @@ function Header() {
                                 className="m-auto"
                             />
                         </Link>
-                        <p className="text-center text-xs">見出しだけを集めたギャラリーサイト</p>
+                        <h1 className="text-center text-xs">見出しだけを集めたギャラリーサイト</h1>
                     </div>
                     <GlobalNav isSpHidden={true}/>
                 </div>

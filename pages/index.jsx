@@ -17,7 +17,7 @@ export default function Home(props) {
         pageImageH={ogp.height}
       />
       <Section>
-        <Posts posts={props.posts} />
+        <Posts posts={props.posts} totalCount={props.totalCount} />
       </Section>
     </>
   )
@@ -25,7 +25,10 @@ export default function Home(props) {
 
 
 export async function getStaticProps() {
-  const posts = await getAllPosts();
+  const data = await getAllPosts();
+  const posts = data.contents;
+  const totalCount = data.totalCount;
+  
   for (const post of posts) {
     if (!post.hasOwnProperty("eyecatch")) {
       post.eyecatch = defaultEyecatch;
@@ -37,6 +40,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts: posts,
+      totalCount:totalCount
     }
   }
 }
