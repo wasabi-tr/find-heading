@@ -42,11 +42,12 @@ function SideMenu() {
                         onKeyDown={(event) => {
                             event.code === 'Space' || event.code === 'Enter' || event.code === 'Escape' ? clickOpenSideMenu() : null
                         }}
+                        onClick={clickOpenSideMenu}
                         aria-controls="side-menu"
                         aria-expanded={ariaExpanded}
                         ref={buttonRef}
                     >
-                        <div className={styles.hamburger} onClick={clickOpenSideMenu} >
+                        <div className={styles.hamburger}  >
                             <span></span>
                             <span></span>
                             <span></span>
