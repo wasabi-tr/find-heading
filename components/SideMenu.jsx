@@ -43,9 +43,10 @@ function SideMenu() {
                             event.code === 'Space' || event.code === 'Enter' || event.code === 'Escape' ? clickOpenSideMenu() : null
                         }}
                         onClick={clickOpenSideMenu}
+                        ref={buttonRef}
+                        aria-label="サイドメニュー"
                         aria-controls="side-menu"
                         aria-expanded={ariaExpanded}
-                        ref={buttonRef}
                     >
                         <div className={styles.hamburger}  >
                             <span></span>
