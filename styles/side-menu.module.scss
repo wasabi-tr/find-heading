@@ -22,11 +22,13 @@
 .close{
     .menu_wrap {
         transform: translate(-100%, 0);
+        visibility: hidden;
     }
 }
 
 .open {
     .menu_wrap {
+        visibility: visible;
         transform: translate(5rem, 0);
         @media screen and (max-width: 768px) {
             transform: translate(0, 0);

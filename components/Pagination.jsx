@@ -21,9 +21,7 @@ function Pagination(props) {
                 :
                 null
             }
-
         </>
-
     );
 }
 

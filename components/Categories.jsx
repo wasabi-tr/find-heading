@@ -33,8 +33,7 @@ function Categories(props) {
                     <span>ロード中...</span> {/* テキストを<span>で囲む */}
                 </div> : null /* ローディングスピナーが表示されない場合はnullを返す */
             }
-            <div className="flex flex-col gap-7 ">
-
+            <div className="flex flex-col gap-7">
                 {categories.map(({ catApiName, catName, catSlugs }) =>
                     <div key={catApiName}>
                         <div className="border-b pb-3 mb-2">{catName}</div>
@@ -44,6 +43,9 @@ function Categories(props) {
                                     <Link
                                         href={`/category/${catApiName}/${slug}`}
                                         onClick={props.closeMenu}
+                                        onKeyDown={(event) => {
+                                            event.code === 'Space' || event.code === 'Enter' || event.code === 'Escape' ? props.ariaExpanded: null
+                                        }}
                                         className={"text-xs"}
                                     >{name}</Link>
                                 </li>
