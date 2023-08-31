@@ -6,17 +6,10 @@ function SideMenu() {
 
     const [isHover, setIsHover] = useState(false);
     const [ariaExpanded, setAriaExpanded] = useState(false)
-    const openSideMenu = () => {
-        setIsHover((prev) => !prev);
-        setAriaExpanded((prev) => !prev);
-    }
+    
     const clickOpenSideMenu = () => {
         setIsHover(!isHover)
         setAriaExpanded(!ariaExpanded)
-    }
-    const closeSideMenu = () => {
-        isHover ? setIsHover(!isHover) : ""
-        ariaExpanded ? setAriaExpanded(!ariaExpanded) : ""
     }
     useEffect(() => {
         const body = document.querySelector('body');
@@ -35,12 +28,12 @@ function SideMenu() {
     }
     return (
         <>
-            <nav className={isHover ? styles.open : styles.close}>
-                <div className={styles.buttonWrap} onMouseEnter={openSideMenu} onMouseLeave={closeSideMenu}>
+            <div className={isHover ? styles.open : styles.close}>
+                <div className={styles.buttonWrap}>
                     <button
                         className={"flex flex-col justify-center items-center w-full h-full"}
                         onKeyDown={(event) => {
-                            event.code === 'Space' || event.code === 'Enter' || event.code === 'Escape' ? clickOpenSideMenu() : null
+                            event.code === 'Escape' ? clickOpenSideMenu() : null
                         }}
                         onClick={clickOpenSideMenu}
                         ref={buttonRef}
@@ -56,7 +49,7 @@ function SideMenu() {
                         <div className={styles.button}>カテゴリー</div>
                     </button>
                 </div>
-                <nav id="side-menu" className={styles.menu_wrap} onMouseEnter={openSideMenu} onMouseLeave={closeSideMenu} aria-label="サイドメニュー">
+                <nav id="side-menu" className={styles.menu_wrap} aria-label="サイドメニュー">
                     <Categories
                         closeMenu={() => setIsHover(false)}
                         ariaExpanded={() => setAriaExpanded(false)}
@@ -69,7 +62,7 @@ function SideMenu() {
                     />
                     <div onFocus={handleFocus} tabIndex={0}></div>
                 </nav>
-            </nav>
+            </div>
 
         </>
     );
