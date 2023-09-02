@@ -1,6 +1,5 @@
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import styles from '@/styles/categories.module.scss'
-
 import { memo } from 'react'
 import Link from 'next/link'
 
