@@ -43,22 +43,6 @@ const GlobalNav = (props) => {
             カテゴリー
           </Link>
         </li>
-        <li>
-          <Link
-            href="/about"
-            className={utility.textHover}
-            onClick={props.isPcShow ? props.closeMenu : null}
-            onKeyDown={(event) => {
-              event.code === 'Space' ||
-              event.code === 'Enter' ||
-              event.code === 'Escape'
-                ? props.ariaExpanded
-                : null
-            }}
-          >
-            運営者について
-          </Link>
-        </li>
       </ul>
     </nav>
   )

@@ -6,7 +6,7 @@ import styles from '@/styles/page-about.module.scss'
 function about() {
   return (
     <>
-      <Meta title="運営者について" />
+      <Meta title="Heeeeadingについて" />
       <Section width="small">
         <section className={styles.section}>
           <h2 className={styles.heading}>Heeeeadingとは</h2>
