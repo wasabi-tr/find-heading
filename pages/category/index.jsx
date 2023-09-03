@@ -2,12 +2,11 @@ import Breadcrumb from '@/components/Breadcrumb'
 import { Categories } from '@/components/Categories'
 import Meta from '@/components/Meta'
 import Section from '@/components/Section'
+import SideMenu from '@/components/SideMenu'
 import { getAllCategories } from '@/lib/api'
 import styles from '@/styles/page-category.module.scss'
 
 const category = ({ allCategories }) => {
-  console.log(allCategories)
-
   const breadcrumbList = [
     {
       name: 'ホーム',
@@ -21,6 +20,7 @@ const category = ({ allCategories }) => {
   return (
     <>
       <Meta title="カテゴリー" />
+      <SideMenu allCategories={allCategories} />
       <div className={styles.wrap}>
         <Breadcrumb list={breadcrumbList}></Breadcrumb>
         <Section width="small">

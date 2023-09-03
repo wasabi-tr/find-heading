@@ -1,11 +1,9 @@
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import styles from '@/styles/categories.module.scss'
-
 import { memo } from 'react'
 import Link from 'next/link'
 
 export const CategoriesMemo = ({ allCategories }) => {
-  console.log(allCategories)
   return (
     <>
       <div className="flex flex-col gap-7">
@@ -17,14 +15,6 @@ export const CategoriesMemo = ({ allCategories }) => {
                 <li key={slug}>
                   <Link
                     href={`/category/${catApiName}/${slug}`}
-                    // onClick={props.closeMenu}
-                    // onKeyDown={(event) => {
-                    //   event.code === 'Space' ||
-                    //   event.code === 'Enter' ||
-                    //   event.code === 'Escape'
-                    //     ? props.ariaExpanded
-                    //     : null
-                    // }}
                     className={'text-xs'}
                   >
                     {name}

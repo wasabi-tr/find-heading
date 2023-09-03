@@ -2,23 +2,22 @@ import '@unocss/reset/tailwind.css'
 import '@/styles/globals.scss'
 import Layout from '@/components/Layout'
 import SideMenu from '@/components/SideMenu'
-import Script from "next/script";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import { GA_MEASUREMENT_ID, pageview } from '@/components/Gtag';
-
+import Script from 'next/script'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+import { GA_MEASUREMENT_ID, pageview } from '@/components/Gtag'
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
+  const router = useRouter()
   useEffect(() => {
     const handleRouterChange = (url) => {
-      pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouterChange);
+      pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouterChange)
     return () => {
-      router.events.off("routeChangeComplete", handleRouterChange);
-    };
-  }, [router.events]);
+      router.events.off('routeChangeComplete', handleRouterChange)
+    }
+  }, [router.events])
   return (
     <>
       <Script
@@ -45,6 +44,4 @@ export default function App({ Component, pageProps }) {
       </Layout>
     </>
   )
-
 }
-
