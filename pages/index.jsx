@@ -15,7 +15,6 @@ export default function Home(props) {
         pageImageW={ogp.width}
         pageImageH={ogp.height}
       />
-
       <Section>
         <Posts posts={props.posts} totalCount={props.totalCount} />
       </Section>

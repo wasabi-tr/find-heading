@@ -1,0 +1,15 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 40px;
+  margin: 24px auto 0;
+  border: 1px solid var(--main);
+  font-size: 14px;
+  transition: 0.3s ease;
+  &:hover {
+    color: var(--white);
+    background: var(--main);
+  }
+}

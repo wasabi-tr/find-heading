@@ -39,6 +39,7 @@ export default function App({ Component, pageProps }) {
       />
 
       <Layout>
+        <SideMenu></SideMenu>
         <Component {...pageProps} />
       </Layout>
     </>

@@ -7,8 +7,6 @@ import { getAllCategories } from '@/lib/api'
 import styles from '@/styles/page-category.module.scss'
 
 const category = ({ allCategories }) => {
-  console.log(allCategories)
-
   const breadcrumbList = [
     {
       name: 'ホーム',
