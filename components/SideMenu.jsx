@@ -56,6 +56,9 @@ function SideMenu() {
   return (
     <>
       <div className={isHover ? styles.open : styles.close}>
+        <div
+          className={`${styles.mask} ${isHover ? styles.open : styles.close}`}
+        ></div>
         <div className={styles.buttonWrap}>
           <button
             className={

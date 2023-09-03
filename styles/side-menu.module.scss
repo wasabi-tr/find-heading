@@ -1,113 +1,129 @@
-.menu_wrap {
-    position: fixed;
-    height: 100%;
-    width: 30%;
-    top: 0;
-    left: 0;
-    background-color: var(--main);
-    transform: translate(-100%, 0);
-    transition: 0.4s;
-    z-index: 5;
-    color: #fff;
-    padding: 3rem;
-    &:focus-within{
-        transform: translate(5rem, 0);
-    }
-
-    @media screen and (max-width: 768px) {
-        padding: 3rem 1.5rem;
-        width: 60%;
-    }
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--black);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 2;
+  &.open {
+    visibility: visible;
+    opacity: 0.4;
+  }
 }
-.close{
-    .menu_wrap {
-        transform: translate(-100%, 0);
-        visibility: hidden;
-    }
+.menu_wrap {
+  position: fixed;
+  height: 100%;
+  width: 30%;
+  top: 0;
+  left: 0;
+  background-color: var(--main);
+  transform: translate(-100%, 0);
+  transition: 0.4s;
+  z-index: 5;
+  color: #fff;
+  padding: 3rem;
+
+  &:focus-within {
+    transform: translate(5rem, 0);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1.5rem;
+    width: 60%;
+  }
+}
+.close {
+  .menu_wrap {
+    transform: translate(-100%, 0);
+    visibility: hidden;
+  }
 }
 
 .open {
-    .menu_wrap {
-        visibility: visible;
-        transform: translate(5rem, 0);
-        @media screen and (max-width: 768px) {
-            transform: translate(0, 0);
-        }
+  .menu_wrap {
+    visibility: visible;
+    transform: translate(5rem, 0);
+    @media screen and (max-width: 768px) {
+      transform: translate(0, 0);
     }
+  }
 
-    .hamburger {
-        span {
-            grid-area: 1/1;
+  .hamburger {
+    span {
+      grid-area: 1/1;
 
-            &:nth-of-type(2) {
-                opacity: 0;
-            }
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
 
-            &:nth-of-type(1) {
-                transform: rotate(30deg);
+      &:nth-of-type(1) {
+        transform: rotate(30deg);
+      }
 
-            }
-
-            &:nth-of-type(3) {
-                transform: rotate(-30deg);
-            }
-        }
+      &:nth-of-type(3) {
+        transform: rotate(-30deg);
+      }
     }
+  }
 }
 
 .hamburger {
-    position: relative;
+  position: relative;
 }
 
 .hamburger {
-    width: 20px;
-    height: 20px;
-    display: grid;
-    place-items: center;
-    gap: 5px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  gap: 5px;
+
+  span {
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+    transition: transform 0.4s;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 3px;
 
     span {
-        width: 100%;
-        height: 1px;
-        background-color: var(--white);
-        transition: transform 0.4s;
+      background-color: var(--main);
     }
-
-    @media screen and (max-width: 768px) {
-        gap: 3px;
-
-        span {
-            background-color: var(--main);
-        }
-    }
+  }
 }
 
 .button {
-    font-size: 12px;
-    writing-mode: vertical-rl;
-    margin: 10px 0 0;
-    color: var(--white);
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  margin: 10px 0 0;
+  color: var(--white);
 
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .buttonWrap {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 5rem;
-    height: 100%;
-    z-index: 20;
-    background: var(--main);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 5rem;
+  height: 100%;
+  z-index: 20;
+  background: var(--main);
 
-    @media screen and (max-width: 768px) {
-        width: 40px;
-        height: 40px;
-        background: none;
-        right: 10px;
-        top: 10px;
-        left: unset;
-    }
+  @media screen and (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    background: none;
+    right: 10px;
+    top: 10px;
+    left: unset;
+  }
 }

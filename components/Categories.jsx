@@ -3,7 +3,12 @@ import styles from '@/styles/categories.module.scss'
 import { memo } from 'react'
 import Link from 'next/link'
 
-export const CategoriesMemo = ({ allCategories }) => {
+export const CategoriesMemo = ({
+  allCategories,
+  closeMenu,
+  ariaExpanded,
+  lastCategoryFocus,
+}) => {
   return (
     <>
       <div className="flex flex-col gap-7">
@@ -15,6 +20,14 @@ export const CategoriesMemo = ({ allCategories }) => {
                 <li key={slug}>
                   <Link
                     href={`/category/${catApiName}/${slug}`}
+                    onClick={closeMenu}
+                    onKeyDown={(event) => {
+                      event.code === 'Space' ||
+                      event.code === 'Enter' ||
+                      event.code === 'Escape'
+                        ? ariaExpanded
+                        : null
+                    }}
                     className={'text-xs'}
                   >
                     {name}

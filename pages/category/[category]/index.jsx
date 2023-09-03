@@ -30,7 +30,7 @@ const categories = ({ postsGroups, pageTitle, pageSlug }) => {
       {postsGroups.map(
         (postsGroup) =>
           postsGroup && (
-            <>
+            <div key={postsGroup.categoryObj.slug}>
               <PageHeader pageTitle={postsGroup.categoryObj.name}></PageHeader>
               <Section>
                 <Posts posts={postsGroup.posts} />
@@ -40,7 +40,7 @@ const categories = ({ postsGroups, pageTitle, pageSlug }) => {
                   もっと見る
                 </Button>
               </Section>
-            </>
+            </div>
           )
       )}
     </>

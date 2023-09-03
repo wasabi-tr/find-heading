@@ -1,7 +1,6 @@
 import '@unocss/reset/tailwind.css'
 import '@/styles/globals.scss'
 import Layout from '@/components/Layout'
-import SideMenu from '@/components/SideMenu'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
@@ -39,7 +38,6 @@ export default function App({ Component, pageProps }) {
       />
 
       <Layout>
-        <SideMenu></SideMenu>
         <Component {...pageProps} />
       </Layout>
     </>
