@@ -5,7 +5,6 @@ import PageHeader from '@/components/PageHeader'
 import Posts from '@/components/Posts'
 import Section from '@/components/Section'
 import { getAllCategories, getAllPostByCategory, getCategory } from '@/lib/api'
-import Link from 'next/link'
 import React from 'react'
 
 const categories = ({ postsGroups, pageTitle, pageSlug }) => {

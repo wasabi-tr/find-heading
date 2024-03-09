@@ -31,7 +31,7 @@ const category = ({ allCategories }) => {
   )
 }
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps = async () => {
   const categoriesByDesignType = await getAllCategories('design-type')
   const categoriesBySiteType = await getAllCategories('site-type')
   const allCategories = [

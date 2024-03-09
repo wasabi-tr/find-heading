@@ -3,12 +3,7 @@ import styles from '@/styles/categories.module.scss'
 import { memo } from 'react'
 import Link from 'next/link'
 
-export const CategoriesMemo = ({
-  allCategories,
-  closeMenu,
-  ariaExpanded,
-  lastCategoryFocus,
-}) => {
+export const CategoriesMemo = ({ allCategories, closeMenu, ariaExpanded }) => {
   return (
     <>
       <div className="flex flex-col gap-7">

@@ -1,5 +1,4 @@
 import Breadcrumb from '@/components/Breadcrumb'
-import Meta from '@/components/Meta'
 import PageHeader from '@/components/PageHeader'
 import Posts from '@/components/Posts'
 import Section from '@/components/Section'

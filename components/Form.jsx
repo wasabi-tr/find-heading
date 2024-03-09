@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from '@/styles/form.module.scss'
 function Form() {
   const nameRef = useRef(null)
